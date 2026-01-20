@@ -5,7 +5,6 @@ const JUMP_VELOCITY = -400.0
 const FLY_SPEED = 300.0
 const rotation_speed = 5.0
 
-
 @export var air_drag: float = 0.95        # Slows horizontal speed when not jetting
 @export var gravity: float = 1200.0       # Gravity strength
 
