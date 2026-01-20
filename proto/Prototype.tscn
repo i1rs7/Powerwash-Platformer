@@ -1,12 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://ui4abl8kc2cq"]
+[gd_scene load_steps=6 format=3 uid="uid://ui4abl8kc2cq"]
 
 [ext_resource type="Texture2D" uid="uid://bas605g5g74lo" path="res://proto/blank white.png" id="1_vxy78"]
+[ext_resource type="Script" uid="uid://bbcimtmubq584" path="res://proto/prototype.gd" id="1_yu4ou"]
 [ext_resource type="PackedScene" uid="uid://dxsigqklwge5g" path="res://proto/proto_player.tscn" id="2_td8e8"]
+[ext_resource type="Texture2D" uid="uid://dilwer34pdfjq" path="res://blue_mouse-removebg-preview.png" id="4_24vo8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_shgpb"]
 size = Vector2(78, 10)
 
 [node name="Prototype" type="Node2D"]
+script = ExtResource("1_yu4ou")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -23,3 +26,8 @@ texture = ExtResource("1_vxy78")
 [node name="ProtoPlayer" parent="." instance=ExtResource("2_td8e8")]
 position = Vector2(383, 297)
 scale = Vector2(0.25, 0.25)
+
+[node name="Mouse" type="Sprite2D" parent="."]
+position = Vector2(257.99997, 114.99999)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_24vo8")
