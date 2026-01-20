@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxsigqklwge5g"]
+
+[ext_resource type="Script" uid="uid://cnohtcngm75an" path="res://proto/character_body_2d.gd" id="1_1mbid"]
+[ext_resource type="Texture2D" uid="uid://byaihenpbs68h" path="res://proto/alienBlue_walk2.png" id="1_eqdwq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1mbid"]
+radius = 47.0
+height = 136.0
+
+[node name="ProtoPlayer" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-2, -58)
+script = ExtResource("1_1mbid")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(2, 56)
+shape = SubResource("CapsuleShape2D_1mbid")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_eqdwq")
